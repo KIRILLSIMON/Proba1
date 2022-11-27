@@ -1,0 +1,40 @@
+public class Author {
+    private final String name;
+    private final String surname;
+
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    @Override
+    public String toString() {
+        return name + " " + surname;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        if (this==o){
+            return true;
+        }
+
+        Author author = (Author) o;
+        return getName().equals(author.getName())&&getSurname().equals(author.getSurname());
+
+
+
+    }
+
+
+}
